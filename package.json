@@ -1,0 +1,18 @@
+{
+  "name": "github-actions-pipline",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "npx json-server db.json",
+    "ui-mode": "npx playwright test --ui",
+    "run-tests": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
+  }
+}
