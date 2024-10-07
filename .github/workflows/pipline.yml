@@ -35,7 +35,7 @@ jobs:
         run: npm run run test
 
       - name: Save test run artifacts
-        uses: actions/uplodad-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-test-results
           path: ./playwright-report
