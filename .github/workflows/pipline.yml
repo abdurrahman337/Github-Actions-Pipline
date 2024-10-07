@@ -1,14 +1,14 @@
 name: Pipline
 on:
   push:
-  branches:
+    branches:
       - main
       - gh-actions
 
   pull_request:
-    branches:
-      - main
-      - gh-actions
+      branches:
+        - main
+        - gh-actions
 
 
 job:
