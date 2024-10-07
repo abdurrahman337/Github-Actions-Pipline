@@ -40,4 +40,4 @@ jobs:
           name: playwright-test-results
           path: ./playwright-report
           if-no-files-found: warn
-          include-hiden-files: false
+          include-hidden-files: false
