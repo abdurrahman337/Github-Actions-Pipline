@@ -11,7 +11,7 @@ on:
         - gh-actions
 
 
-job:
+jobs:
   run-automated-tests:
     run-on: ubuntu-latest
     steps:
