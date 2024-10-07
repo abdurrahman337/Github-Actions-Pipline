@@ -1,4 +1,4 @@
-name: Pipline
+name: Pipeline
 on:
   push:
     branches:
@@ -6,39 +6,33 @@ on:
       - gh-actions
 
   pull_request:
-      branches:
-        - main
-        - gh-actions
-
+    branches:
+      - main
+      - gh-actions
 
 jobs:
   run-automated-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code/ Fetch code
-        run: echo 'Fetch code'
+        uses: actions/checkout@v3
 
       - name: Setup Node.js version
-        run: echo 'setup nodejs'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
 
-
-      
       - name: Install node packages
-        run: echo 'Install node packages'
+        run: npm install
 
-
-      - name: Resote database
+      - name: Restore database
         run: echo 'Restore database'
-
 
       - name: Start application
         run: echo 'Start application'
 
-      - name: Run test
-       run: echo 'run tests'
+      - name: Run tests
+        run: echo 'run tests'
 
       - name: Save test run artifacts
-       run: echo 'Save test run artifacts'
-
-
-
+        run: echo 'Save test run artifacts'
